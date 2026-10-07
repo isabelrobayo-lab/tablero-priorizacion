@@ -37,7 +37,7 @@ export function ChartEstado({ requerimientos }) {
     <div className="chart-card">
       <h3>📊 Distribución por Estado</h3>
       <p className="chart-desc">Requerimientos en cada fase del ciclo de vida</p>
-      <ResponsiveContainer width="100%" height={260}>
+      <ResponsiveContainer width="100%" height={170}>
         <PieChart>
           <Pie
             data={data}
@@ -45,8 +45,8 @@ export function ChartEstado({ requerimientos }) {
             nameKey="name"
             cx="50%"
             cy="50%"
-            innerRadius={55}
-            outerRadius={90}
+            innerRadius={38}
+            outerRadius={62}
             paddingAngle={2}
             label={(e) => `${e.value}`}
           >
@@ -94,7 +94,7 @@ export function ChartTipo({ requerimientos }) {
     <div className="chart-card">
       <h3>🎯 Impacto / Priorización por Tipo</h3>
       <p className="chart-desc">Cantidad y priorización acumulada por tipo de requerimiento</p>
-      <ResponsiveContainer width="100%" height={260}>
+      <ResponsiveContainer width="100%" height={170}>
         <BarChart data={data} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
           <XAxis dataKey="name" tick={{ fill: '#94a3b8', fontSize: 11 }} />
